@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+projet_manager,projet manager,model_clientspec_projet,group_manager,1,1,1,1
+tache_manager,tache manager,model_clientspec_tache,group_manager,1,1,1,1
+projet_read_all,projet all,model_clientspec_projet,,1,0,0,0
+tache_read_all,tache all,model_clientspec_tache,,1,1,1,1

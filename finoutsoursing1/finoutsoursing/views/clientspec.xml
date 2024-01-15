@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_task_form2">
+        <field name="name">view.tache</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name= 'project_id']" position="after">
+                <field name="name_projet"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
+
+
+        <!-- <record model="ir.ui.view" id="projet_form_view">-->
+        <!--            <field name="name">projet.form</field>-->
+        <!--            <field name="model">clientspec.projet</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <form string="projet Form">-->
+        <!--                    <sheet>-->
+        <!--                        <group>-->
+        <!--                            <field name="name"/>-->
+        <!--                        </group>-->
+        <!--                    </sheet>-->
+        <!--                </form>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--        &lt;!&ndash; override the automatically generated list view for clients &ndash;&gt;-->
+        <!--        <record model="ir.ui.view" id="client_tree_view">-->
+        <!--            <field name="name">projet.tree</field>-->
+        <!--            <field name="model">clientspec.projet</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <tree string="projet Tree">-->
+        <!--                    <field name="name"/>-->
+        <!--                </tree>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--        <record model="ir.ui.view" id="projet_search_view">-->
+        <!--            <field name="name">projet.search</field>-->
+        <!--            <field name="model">clientspec.projet</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <search>-->
+        <!--                    <field name="name"/>-->
+        <!--                </search>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--        &lt;!&ndash; window action &ndash;&gt;-->
+        <!--        &lt;!&ndash;-->
+        <!--            The following tag is an action definition for a "window action",-->
+        <!--            that is an action opening a view or a set of views-->
+        <!--        &ndash;&gt;-->
+        <!--        <record model="ir.actions.act_window" id="projet_list_action">-->
+        <!--            <field name="name">projets</field>-->
+        <!--            <field name="res_model">clientspec.projet</field>-->
+        <!--            <field name="view_mode">tree,form</field>-->
+        <!--            <field name="help" type="html">-->
+        <!--                <p class="o_view_nocontent_smiling_face">Create the first projet-->
+        <!--                </p>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--        &lt;!&ndash; top level menu: no parent &ndash;&gt;-->
+        <!--        <menuitem id="main_clientspec_menu" name="projet Spec"/>-->
+        <!--        &lt;!&ndash; A first level in the left side menu is needed-->
+        <!--             before using action= attribute &ndash;&gt;-->
+        <!--        <menuitem id="clientspec_menu" name="projet Spec"-->
+        <!--                  parent="main_clientspec_menu"/>-->
+        <!--        &lt;!&ndash; the following menuitem should appear *after*-->
+        <!--             its parent clientspec_menu and *after* its-->
+        <!--             action client_list_action &ndash;&gt;-->
+        <!--        <menuitem id="projets_menu" name="projets" parent="clientspec_menu"-->
+        <!--                  action="projet_list_action"/>-->
+        <!--        &lt;!&ndash; Full id location:-->
+        <!--             action="clientspec.client_list_action"-->
+        <!--             It is not required when it is the same module &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; commande form view &ndash;&gt;-->
+        <!--        <record model="ir.ui.view" id="tache_form_view">-->
+        <!--            <field name="name">tache.form</field>-->
+        <!--            <field name="model">clientspec.tache</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <form string="tache Form">-->
+        <!--                    <sheet>-->
+        <!--                        <group>-->
+        <!--                            <group string="General">-->
+        <!--                                <field name="projet_id"/>-->
+        <!--                                <field name="name"/>-->
+        <!--                            </group>-->
+        <!--                            <group string="taches">-->
+        <!--                                <field name="date"/>-->
+        <!--                                <field name="price"/>-->
+        <!--                            </group>-->
+        <!--                        </group>-->
+        <!--                    </sheet>-->
+        <!--                </form>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--        &lt;!&ndash; commande tree/list view &ndash;&gt;-->
+        <!--        <record model="ir.ui.view" id="tache_tree_view">-->
+        <!--            <field name="name">tache.tree</field>-->
+        <!--            <field name="model">clientspec.tache</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <tree string="tache Tree">-->
+        <!--                    <field name="name"/>-->
+        <!--                    <field name="projet_id"/>-->
+        <!--                </tree>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--        <record model="ir.actions.act_window" id="tache_list_action">-->
+        <!--            <field name="name">taches</field>-->
+        <!--            <field name="res_model">clientspec.tache</field>-->
+        <!--            <field name="view_mode">tree,form</field>-->
+        <!--        </record>-->
+
+        <!--        <menuitem id="tache_menu" name="taches"-->
+        <!--                  parent="clientspec_menu"-->
+        <!--                  action="tache_list_action"/>-->
